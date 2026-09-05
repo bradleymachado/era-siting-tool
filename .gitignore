@@ -1,0 +1,22 @@
+# Deploy repository - a curated public subset. Nothing bulk lives here.
+
+__pycache__/
+*.py[cod]
+*.pyo
+
+*.db-journal
+*.db-wal
+*.db-shm
+
+.env
+.venv/
+venv/
+env/
+*.key
+
+Thumbs.db
+desktop.ini
+.DS_Store
+.ipynb_checkpoints/
+.vscode/
+.idea/

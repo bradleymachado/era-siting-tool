@@ -1,0 +1,44 @@
+{
+  "manifest": "era_ph5_grains_manifest.json",
+  "ruling": "direction_ph5_branch_b_v1.0.md E-5.1 (P5-2b)",
+  "written_by": "era_ph5_extract.py",
+  "script_md5": "5737ec292b6a6376e46c99407925246b",
+  "written_utc": "2026-09-04T22:18:28Z",
+  "db_file": "era_rates.db",
+  "db_md5": "1c72e7a1b32c99a650d2e1fba17ae21e",
+  "user_version": 14,
+  "grains": {
+    "era_ph5_metro.csv": {
+      "grain": "G1",
+      "md5": "84fe4dbff836a169ec29d9f38281b683",
+      "rows": 8,
+      "cols": 73,
+      "bytes": 7776,
+      "written_utc": "2026-09-04T22:18:28Z"
+    },
+    "era_ph5_stack.csv": {
+      "grain": "G2",
+      "md5": "3e8825ac3755a67fdcd882c32ba6da2d",
+      "rows": 33,
+      "cols": 16,
+      "bytes": 7494,
+      "written_utc": "2026-09-04T22:18:28Z"
+    },
+    "era_ph5_month.csv": {
+      "grain": "G3",
+      "md5": "f5b3638a2f9cc942b8d6835014043048",
+      "rows": 384,
+      "cols": 24,
+      "bytes": 84637,
+      "written_utc": "2026-09-04T22:18:28Z"
+    },
+    "era_ph5_caveat.csv": {
+      "grain": "G4",
+      "md5": "fc1fa4b10c5f536faeb5850647317db7",
+      "rows": 21,
+      "cols": 12,
+      "bytes": 9097,
+      "written_utc": "2026-09-04T22:18:28Z"
+    }
+  }
+}
