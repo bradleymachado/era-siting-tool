@@ -48,21 +48,28 @@ D_ARGMAX_TOTAL = {"Atlanta": 7, "Austin": 7, "Chicago": 5, "Columbus": 7,
                   "Dallas-Fort Worth": 7, "Northern Virginia": 7,
                   "Phoenix": 7, "San Jose / Bay Area": 7}
 # argmax month of billed_kw_15min
-D_ARGMAX_KW = {"Atlanta": 7, "Austin": 6, "Chicago": 8, "Columbus": 8,
-               "Dallas-Fort Worth": 6, "Northern Virginia": 8,
+# REFRESHED AT UNIT 6E-2 on the two_segment_ph6 published basis (P6-R18).  Austin 6 -> 7 and
+# Northern Virginia 8 -> 7: F6E-11 measured the FORM moving the billed peak INTERVAL in three of
+# eight metros, and in two of them it crosses a month boundary.  The map still takes three
+# distinct values, so D2c is still not satisfiable by any constant assignment.
+D_ARGMAX_KW = {"Atlanta": 7, "Austin": 7, "Chicago": 8, "Columbus": 8,
+               "Dallas-Fort Worth": 6, "Northern Virginia": 7,
                "Phoenix": 8, "San Jose / Bay Area": 6}
 # F5A-5: a ratchet is a season, not a boolean
 D_RATCHET_MONTHS = {"Northern Virginia": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12]}
 
 # F5A-3 / F4E-3 / the excluded band
-D_PORTFOLIO_BASELINE_USD = 6694135866.22
+# REFRESHED AT UNIT 6E-2 on the two_segment_ph6 published basis (P6-R18).  The pre-6E-2 values,
+# on the linear_4a basis, were 6694135866.22 and rider -167099502.51 / energy -87551080.84 /
+# demand -37732405.75 / statutory 17239632.05.  mitigation_fixed_usd does not move.
+D_PORTFOLIO_BASELINE_USD = 6690861877.21
 D_EXCLUDED_BAND_USD = -741104525.28
 D_CHANNELS = {
-    "mitigation_rider_usd": -167099502.51,
-    "mitigation_energy_channel_usd": -87551080.84,
-    "mitigation_demand_channel_usd": -37732405.75,
+    "mitigation_rider_usd": -166248514.22,
+    "mitigation_energy_channel_usd": -87127512.95,
+    "mitigation_demand_channel_usd": -36302455.20,
     "mitigation_fixed_usd": 226130.88,
-    "mitigation_statutory_usd": 17239632.05,
+    "mitigation_statutory_usd": 17239583.05,
 }
 # V3's declared row order: most negative first. This IS F4E-3.
 V3_ORDER = ["mitigation_rider_usd", "mitigation_energy_channel_usd",

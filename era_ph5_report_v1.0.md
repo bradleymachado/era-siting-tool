@@ -14,7 +14,7 @@ Basis, stated once: the published facility basis `plant_derived_4a`, L = 1.150<!
 
 ## 1 — What the page is
 
-`era_ph5_dashboard.html`: **one self-contained file**, 193,712<!--F:era_ph5_dashboard.html:bytes--> bytes across 848<!--F:era_ph5_dashboard.html:lines--> lines, md5 2f7b7a750dd6b121841e5a68589cb1f0<!--F:era_ph5_dashboard.html:md5-->. It opens from disk, from an
+`era_ph5_dashboard.html`: **one self-contained file**, 196,396<!--F:era_ph5_dashboard.html:bytes--> bytes across 848<!--F:era_ph5_dashboard.html:lines--> lines, md5 84f25e866073ca9667353fcd105b4228<!--F:era_ph5_dashboard.html:md5-->. It opens from disk, from an
 email attachment and from any static host, identically. It contains no script source, no stylesheet
 link, no font import and no URL a browser would fetch. Python's standard library writes every mark as
 inline SVG, so what a browser paints is what the build wrote — which is the whole reason an automated
@@ -28,25 +28,25 @@ Six views are drawn, and the page is built by `era_ph5_build_html.py` (1981d0bbe
 
 ## 2 — What the page shows
 
-**The ranking, and the answer to the question the tool exists to ask.** A giga-scale campus taking 7,892,912.46<!--G:G1:Austin:it_annual_mwh--> IT-MWh a year costs between 47.67<!--D:spread_low_it--> and 180.96<!--D:spread_high_it--> dollars per IT-MWh depending only on where it is put — **a factor of 3.80<!--D:spread_ratio_it-->**. Across all 8<!--D:metro_count--> metros, that is 63,143,299.69<!--D:portfolio_it_mwh--> IT-MWh, a baseline of $6.694<!--D:portfolio_baseline_usd_b--> B a year and a mitigated total of $6.419<!--D:portfolio_mitigated_usd_b--> B. **The entire mitigation stack — every tariff elective in the library, plus a battery, in every metro — is worth 4.11<!--D:portfolio_mitigation_pct--> % of the bill**, or -274,917,226.17<!--D:portfolio_mitigation_usd--> dollars a year. Siting beats mitigating, and it is not close.
+**The ranking, and the answer to the question the tool exists to ask.** A giga-scale campus taking 7,892,912.46<!--G:G1:Austin:it_annual_mwh--> IT-MWh a year costs between 47.67<!--D:spread_low_it--> and 180.96<!--D:spread_high_it--> dollars per IT-MWh depending only on where it is put — **a factor of 3.80<!--D:spread_ratio_it-->**. Across all 8<!--D:metro_count--> metros, that is 63,143,299.69<!--D:portfolio_it_mwh--> IT-MWh, a baseline of $6.691<!--D:portfolio_baseline_usd_b--> B a year and a mitigated total of $6.419<!--D:portfolio_mitigated_usd_b--> B. **The entire mitigation stack — every tariff elective in the library, plus a battery, in every metro — is worth 4.07<!--D:portfolio_mitigation_pct--> % of the bill**, or -272,212,768.44<!--D:portfolio_mitigation_usd--> dollars a year. Siting beats mitigating, and it is not close.
 
 <!--ERA-BLOCK:ranking-->
 | # | metro | utility | schedule | baseline $/yr | baseline $/IT-MWh | mitigated $/yr | mitigated $/IT-MWh | mitigated % |
 | --: | --- | --- | --- | --: | --: | --: | --: | --: |
-| 1 | Dallas-Fort Worth | Oncor Electric Delivery Company LLC | TRANS-SVC | 376,275,667.62 | 47.67 | 373,816,438.34 | 47.36 | 0.65 |
-| 2 | Columbus | AEP Ohio (Ohio Power Co) | DCT-T | 546,655,609.92 | 69.26 | 529,071,129.42 | 67.03 | 3.22 |
-| 3 | Chicago | Commonwealth Edison Co | BESH-HV | 643,584,518.09 | 81.54 | 591,589,837.26 | 74.95 | 8.08 |
-| 4 | Austin | Austin Energy | COMM-PRI-20MW | 748,606,614.06 | 94.85 | 655,353,403.13 | 83.03 | 12.46 |
-| 5 | Northern Virginia | Virginia Electric & Power Co | GS-4 | 848,998,135.27 | 107.56 | 771,681,508.12 | 97.77 | 9.11 |
-| 6 | Phoenix | Arizona Public Service Co | E-35 | 975,288,132.77 | 123.57 | 969,298,141.82 | 122.81 | 0.61 |
-| 7 | Atlanta | Georgia Power Co | PLL-18 | 1,126,412,681.66 | 142.71 | 1,115,500,906.22 | 141.33 | 0.97 |
+| 1 | Dallas-Fort Worth | Oncor Electric Delivery Company LLC | TRANS-SVC | 376,239,881.92 | 47.67 | 373,644,868.57 | 47.34 | 0.69 |
+| 2 | Columbus | AEP Ohio (Ohio Power Co) | DCT-T | 546,620,920.67 | 69.25 | 529,069,703.58 | 67.03 | 3.21 |
+| 3 | Chicago | Commonwealth Edison Co | BESH-HV | 643,411,026.30 | 81.52 | 591,516,515.88 | 74.94 | 8.07 |
+| 4 | Austin | Austin Energy | COMM-PRI-20MW | 747,758,438.36 | 94.74 | 655,259,163.39 | 83.02 | 12.37 |
+| 5 | Northern Virginia | Virginia Electric & Power Co | GS-4 | 847,957,221.81 | 107.43 | 771,663,550.32 | 97.77 | 9.00 |
+| 6 | Phoenix | Arizona Public Service Co | E-35 | 974,892,347.21 | 123.51 | 969,174,668.20 | 122.79 | 0.59 |
+| 7 | Atlanta | Georgia Power Co | PLL-18 | 1,125,667,534.12 | 142.62 | 1,115,413,363.08 | 141.32 | 0.91 |
 | 8 | San Jose / Bay Area | Pacific Gas & Electric Co | B-20-T | 1,428,314,506.82 | 180.96 | 1,412,907,275.74 | 179.01 | 1.08 |
-| | **portfolio** | | | **6,694,135,866.22** | | **6,419,218,640.05** | | **4.11** |
+| | **portfolio** | | | **6,690,861,877.21** | | **6,418,649,108.77** | | **4.07** |
 <!--/ERA-BLOCK:ranking-->
 
 **The order does not move between bases.** Ranking the same eight metros on dollars per metered-MWh —
 comparing tariffs rather than sites — gives the identical order, which is why the basis swap is offered
-and why the siting metric is the default. The tightest adjacency in the table is 7.9209<!--D:tightest_gap_it--> dollars per IT-MWh, and it sits between the second and third metros: the top of the ranking is its narrowest part, and Section 3 says why that matters more than it looks.
+and why the siting metric is the default. The tightest adjacency in the table is 7.9118<!--D:tightest_gap_it--> dollars per IT-MWh, and it sits between the second and third metros: the top of the ranking is its narrowest part, and Section 3 says why that matters more than it looks.
 
 **Where the mitigation actually comes from.** The five channels are reported separately because a
 load-factor change moves a demand charge as well as an energy charge.
@@ -54,50 +54,50 @@ load-factor change moves a demand charge as well as an energy charge.
 <!--ERA-BLOCK:channels-->
 | metro | rider $/yr | energy $/yr | demand $/yr | fixed $/yr | statutory $/yr |
 | --- | --: | --: | --: | --: | --: |
-| Dallas-Fort Worth | -2,592,245.12 | 133,015.84 | 0.00 | 0.00 | 0.00 |
-| Columbus | -34,873,657.87 | 49,545.32 | 0.00 | 0.00 | 17,239,632.05 |
-| Chicago | -49,166,618.19 | 35,149.89 | -2,863,212.54 | 0.00 | 0.00 |
-| Austin | 0.00 | -80,153,228.35 | -13,326,113.46 | 226,130.88 | 0.00 |
-| Northern Virginia | -73,932,777.42 | 1,108.05 | -3,384,957.79 | 0.00 | 0.00 |
-| Phoenix | -112,161.59 | 45,913.41 | -5,923,742.78 | 0.00 | 0.00 |
-| Atlanta | 0.00 | -6,782,668.44 | -4,129,106.99 | 0.00 | 0.00 |
+| Dallas-Fort Worth | -2,735,373.54 | 140,360.19 | 0.00 | 0.00 | 0.00 |
+| Columbus | -34,840,187.03 | 49,386.90 | 0.00 | 0.00 | 17,239,583.05 |
+| Chicago | -49,165,530.98 | 35,013.35 | -2,763,992.79 | 0.00 | 0.00 |
+| Austin | 0.00 | -80,148,199.73 | -12,577,206.11 | 226,130.88 | 0.00 |
+| Northern Virginia | -72,978,646.05 | 1,110.82 | -3,316,136.25 | 0.00 | 0.00 |
+| Phoenix | -106,734.28 | 45,331.91 | -5,656,276.65 | 0.00 | 0.00 |
+| Atlanta | 0.00 | -6,370,599.82 | -3,883,571.21 | 0.00 | 0.00 |
 | San Jose / Bay Area | -6,422,042.34 | -879,916.55 | -8,105,272.19 | 0.00 | 0.00 |
-| **portfolio** | **-167,099,502.51** | **-87,551,080.84** | **-37,732,405.75** | **226,130.88** | **17,239,632.05** |
+| **portfolio** | **-166,248,514.22** | **-87,127,512.95** | **-36,302,455.20** | **226,130.88** | **17,239,583.05** |
 <!--/ERA-BLOCK:channels-->
 
-**The rider channel carries it**: -167,099,502.51<!--D:channel_rider_usd--> dollars against -87,551,080.84<!--D:channel_energy_usd--> of energy and -37,732,405.75<!--D:channel_demand_usd--> of demand — more than the two other real channels combined. The portfolio prices 6<!--D:measure_row_count--> tariff electives, worth -229,931,560.09<!--D:measures_total_usd--> dollars, and the battery adds -44,985,666.07<!--D:storage_total_usd-->. Austin is the most mitigable metro at 12.46<!--G:G1:Austin:mitigation_pct_of_baseline--> % of its own baseline; Phoenix is the least at 0.61<!--G:G1:Phoenix:mitigation_pct_of_baseline--> %.
+**The rider channel carries it**: -166,248,514.22<!--D:channel_rider_usd--> dollars against -87,127,512.95<!--D:channel_energy_usd--> of energy and -36,302,455.20<!--D:channel_demand_usd--> of demand — more than the two other real channels combined. The portfolio prices 6<!--D:measure_row_count--> tariff electives, worth -229,906,039.06<!--D:measures_total_usd--> dollars, and the battery adds -42,306,729.38<!--D:storage_total_usd-->. Austin is the most mitigable metro at 12.37<!--G:G1:Austin:mitigation_pct_of_baseline--> % of its own baseline; Phoenix is the least at 0.59<!--G:G1:Phoenix:mitigation_pct_of_baseline--> %.
 
 **The walk from baseline to mitigated, per metro**, which is what the waterfall draws:
 
 <!--ERA-BLOCK:stack-->
 | metro | step | kind | component | $/yr | $/IT-MWh |
 | --- | --: | --- | --- | --: | --: |
-| Dallas-Fort Worth | 0 | baseline | TRANS-SVC | 376,275,667.62 | 47.67 |
-| Dallas-Fort Worth | 1 | storage | B100-4H battery, CP4 dispatch | -2,459,229.28 | -0.31 |
-| Dallas-Fort Worth | 2 | mitigated | mitigated total | 373,816,438.34 | 47.36 |
-| Columbus | 0 | baseline | DCT-T | 546,655,609.92 | 69.26 |
-| Columbus | 1 | measure | Ohio kWh excise self-assessment | -16,187,651.92 | -2.05 |
-| Columbus | 2 | storage | B100-4H battery, FLAT dispatch | -1,396,828.58 | -0.18 |
-| Columbus | 3 | mitigated | mitigated total | 529,071,129.42 | 67.03 |
-| Chicago | 0 | baseline | BESH-HV | 643,584,518.09 | 81.54 |
-| Chicago | 1 | measure | ComEd Rider EEPP opt-out | -44,307,832.56 | -5.61 |
-| Chicago | 2 | measure | Illinois self-direct RPS | -4,872,023.08 | -0.62 |
-| Chicago | 3 | storage | B100-4H battery, FLAT dispatch | -2,814,825.19 | -0.36 |
-| Chicago | 4 | mitigated | mitigated total | 591,589,837.26 | 74.95 |
-| Austin | 0 | baseline | COMM-PRI-20MW | 748,606,614.06 | 94.85 |
-| Austin | 1 | measure | Austin Energy high load factor election | -87,252,874.77 | -11.05 |
-| Austin | 2 | storage | B100-4H battery, FLAT dispatch | -6,000,336.17 | -0.76 |
-| Austin | 3 | mitigated | mitigated total | 655,353,403.13 | 83.03 |
-| Northern Virginia | 0 | baseline | GS-4 | 848,998,135.27 | 107.56 |
-| Northern Virginia | 1 | measure | Dominion Rider RPS exemption | -70,889,135.43 | -8.98 |
-| Northern Virginia | 2 | storage | B100-4H battery, FLAT dispatch | -6,427,491.72 | -0.81 |
-| Northern Virginia | 3 | mitigated | mitigated total | 771,681,508.12 | 97.77 |
-| Phoenix | 0 | baseline | E-35 | 975,288,132.77 | 123.57 |
-| Phoenix | 1 | storage | B100-4H battery, FLAT dispatch | -5,989,990.96 | -0.76 |
-| Phoenix | 2 | mitigated | mitigated total | 969,298,141.82 | 122.81 |
-| Atlanta | 0 | baseline | PLL-18 | 1,126,412,681.66 | 142.71 |
-| Atlanta | 1 | storage | B100-4H battery, FLAT dispatch | -10,911,775.43 | -1.38 |
-| Atlanta | 2 | mitigated | mitigated total | 1,115,500,906.22 | 141.33 |
+| Dallas-Fort Worth | 0 | baseline | TRANS-SVC | 376,239,881.92 | 47.67 |
+| Dallas-Fort Worth | 1 | storage | B100-4H battery, CP4 dispatch | -2,595,013.35 | -0.33 |
+| Dallas-Fort Worth | 2 | mitigated | mitigated total | 373,644,868.57 | 47.34 |
+| Columbus | 0 | baseline | DCT-T | 546,620,920.67 | 69.25 |
+| Columbus | 1 | measure | Ohio kWh excise self-assessment | -16,187,603.83 | -2.05 |
+| Columbus | 2 | storage | B100-4H battery, FLAT dispatch | -1,363,613.26 | -0.17 |
+| Columbus | 3 | mitigated | mitigated total | 529,069,703.58 | 67.03 |
+| Chicago | 0 | baseline | BESH-HV | 643,411,026.30 | 81.52 |
+| Chicago | 1 | measure | ComEd Rider EEPP opt-out | -44,306,817.63 | -5.61 |
+| Chicago | 2 | measure | Illinois self-direct RPS | -4,871,911.48 | -0.62 |
+| Chicago | 3 | storage | B100-4H battery, FLAT dispatch | -2,715,781.31 | -0.34 |
+| Chicago | 4 | mitigated | mitigated total | 591,516,515.88 | 74.94 |
+| Austin | 0 | baseline | COMM-PRI-20MW | 747,758,438.36 | 94.74 |
+| Austin | 1 | measure | Austin Energy high load factor election | -87,228,893.06 | -11.05 |
+| Austin | 2 | storage | B100-4H battery, FLAT dispatch | -5,270,381.90 | -0.67 |
+| Austin | 3 | mitigated | mitigated total | 655,259,163.39 | 83.02 |
+| Northern Virginia | 0 | baseline | GS-4 | 847,957,221.81 | 107.43 |
+| Northern Virginia | 1 | measure | Dominion Rider RPS exemption | -70,888,770.71 | -8.98 |
+| Northern Virginia | 2 | storage | B100-4H battery, FLAT dispatch | -5,404,900.77 | -0.68 |
+| Northern Virginia | 3 | mitigated | mitigated total | 771,663,550.32 | 97.77 |
+| Phoenix | 0 | baseline | E-35 | 974,892,347.21 | 123.51 |
+| Phoenix | 1 | storage | B100-4H battery, FLAT dispatch | -5,717,679.01 | -0.72 |
+| Phoenix | 2 | mitigated | mitigated total | 969,174,668.20 | 122.79 |
+| Atlanta | 0 | baseline | PLL-18 | 1,125,667,534.12 | 142.62 |
+| Atlanta | 1 | storage | B100-4H battery, FLAT dispatch | -10,254,171.04 | -1.30 |
+| Atlanta | 2 | mitigated | mitigated total | 1,115,413,363.08 | 141.32 |
 | San Jose / Bay Area | 0 | baseline | B-20-T | 1,428,314,506.82 | 180.96 |
 | San Jose / Bay Area | 1 | measure | PG&E B-20 power factor adjustment | -6,422,042.34 | -0.81 |
 | San Jose / Bay Area | 2 | storage | B100-4H battery, WIN53 dispatch | -8,985,188.74 | -1.14 |
@@ -110,15 +110,15 @@ load-factor change moves a demand charge as well as an energy charge.
 | metro | kind | low $/IT-MWh | central $/IT-MWh | high $/IT-MWh | what the interval is |
 | --- | --- | --: | --: | --: | --- |
 | Dallas-Fort Worth | band | 37.46 | 47.67 | 57.88 | +/-25 % of the market component |
-| Columbus | band | 55.90 | 69.26 | 82.62 | +/-25 % of the market component |
-| Chicago | band | 70.87 | 81.54 | 92.21 | +/-25 % of the market component |
-| Chicago | published pair | 73.65 | | 74.95 | chicago_tariff, unruled (F4C-7) |
-| Northern Virginia | published pair | 97.77 | | 98.50 | tou_reaches, unruled (F4B-2) |
+| Columbus | band | 55.89 | 69.25 | 82.62 | +/-25 % of the market component |
+| Chicago | band | 70.85 | 81.52 | 92.19 | +/-25 % of the market component |
+| Chicago | published pair | 73.50 | | 74.94 | chicago_tariff, unruled (F4C-7) |
+| Northern Virginia | published pair | 92.62 | | 97.77 | nova_tariff, unruled (F4B-2) |
 <!--/ERA-BLOCK:bands-->
 
 **The three cheapest metros are exactly the three banded ones.** Columbus's upper edge crosses
 Chicago's central value, and that is the only adjacency the bands touch anywhere in the table. **The
-size of the crossing depends on the basis and the page prints neither figure**: it is 0.80423602<!--D:band_crossing_facility--> dollars per metered-MWh on the published facility basis and 1.08102537<!--D:band_crossing_it--> on the siting metric the view is drawn on. Two cells, in no cell. The page draws the geometry and names the caveat; the gate re-derives the adjacency from the grain and asserts there is exactly one.
+size of the crossing depends on the basis and the page prints neither figure**: it is 0.81791127<!--D:band_crossing_facility--> dollars per metered-MWh on the published facility basis and 1.09857228<!--D:band_crossing_it--> on the siting metric the view is drawn on. Two cells, in no cell. The page draws the geometry and names the caveat; the gate re-derives the adjacency from the grain and asserts there is exactly one.
 
 **Shape through the year**, because an annual figure hides the interval that sets the demand charge:
 
@@ -128,8 +128,8 @@ size of the crossing depends on the basis and the page prints neither figure**: 
 | Dallas-Fort Worth | 7 | 7 | 6 | 0 |
 | Columbus | 7 | 7 | 8 | 0 |
 | Chicago | 7 | 5 | 8 | 0 |
-| Austin | 7 | 7 | 6 | 0 |
-| Northern Virginia | 7 | 7 | 8 | 11 |
+| Austin | 7 | 7 | 7 | 0 |
+| Northern Virginia | 7 | 7 | 7 | 11 |
 | Phoenix | 7 | 7 | 8 | 0 |
 | Atlanta | 7 | 7 | 7 | 0 |
 | San Jose / Bay Area | 7 | 7 | 6 | 0 |
@@ -155,7 +155,7 @@ the higher-voltage schedule, so counting the move again would be double-counting
 | **total** | **excluded from every mitigated figure** | **-741,104,525.28** | |
 <!--/ERA-BLOCK:excluded-->
 
-That band is -741,104,525.28<!--D:excluded_total_usd--> dollars a year — **2.70<!--D:excluded_over_mitigation--> times the entire real mitigation stack**. It is drawn as a muted band beside the walk, never as an absence, and every sibling is priced against an unpriced transfer of substation and interconnection capex onto the customer.
+That band is -741,104,525.28<!--D:excluded_total_usd--> dollars a year — **2.72<!--D:excluded_over_mitigation--> times the entire real mitigation stack**. It is drawn as a muted band beside the walk, never as an absence, and every sibling is priced against an unpriced transfer of substation and interconnection capex onto the customer.
 
 **The FERC take-or-pay floor carries no figure at all.** ComEd's OATT Attachment H-13 Transmission
 Security Agreement is the single largest unpriced item in the project. It sits first in the caveats
@@ -181,11 +181,11 @@ stale.
 <!--ERA-BLOCK:grains-->
 | grain | file | rows | columns | md5 | what it is |
 | --- | --- | --: | --: | --- | --- |
-| G1 | era_ph5_metro.csv | 8 | 73 | 84fe4dbff836a169ec29d9f38281b683 | one row per metro: the ranking, the bases, the bands, the brackets |
-| G2 | era_ph5_stack.csv | 33 | 16 | 3e8825ac3755a67fdcd882c32ba6da2d | the mitigation walk, one row per component, excluded siblings included |
-| G3 | era_ph5_month.csv | 384 | 24 | f5b3638a2f9cc942b8d6835014043048 | twelve months x four stages per metro, levels and deltas |
-| G4 | era_ph5_caveat.csv | 21 | 12 | fc1fa4b10c5f536faeb5850647317db7 | the honesty layer: every caveat, priced or not |
-| | `era_ph5_grains_manifest.json` | | | d28ed3404fab100d8bb31d0e0bc95323 | the pins every row above is read against |
+| G1 | era_ph5_metro.csv | 8 | 73 | 4408f5727b71553ea2611e6eb047570a | one row per metro: the ranking, the bases, the bands, the brackets |
+| G2 | era_ph5_stack.csv | 33 | 16 | a15f6bd15f692cbf5af97fbe2fe0065b | the mitigation walk, one row per component, excluded siblings included |
+| G3 | era_ph5_month.csv | 384 | 24 | fea29ab3db984b781cba8c0beb7f759d | twelve months x four stages per metro, levels and deltas |
+| G4 | era_ph5_caveat.csv | 21 | 12 | 785d59499a11b8092690261bd8f55b4f | the honesty layer: every caveat, priced or not |
+| | `era_ph5_grains_manifest.json` | | | 63f3cfbabe28b543e01ca9201bdc9e40 | the pins every row above is read against |
 <!--/ERA-BLOCK:grains-->
 
 The siting metric is dollars per IT-MWh: sites are compared at equal IT capacity, and IT energy is
@@ -208,18 +208,18 @@ gate reconciles cannot. It holds 21<!--D:caveat_count--> rows: 3<!--D:caveat_unp
 | 4 | C-VOLT-EXCL | excluded | Columbus;Dallas-Fort Worth;San Jose / Bay Area | 1 | -741,104,525.28 | -93.894937 | - |
 | 5 | C-PGE-OPT-R | unavailable | San Jose / Bay Area | 1 | 91,828,409.00 | 11.634300 | Ruling 10 |
 | 6 | C-PGE-OPT-S | unavailable | San Jose / Bay Area | 1 | 103,339,369.00 | 13.092700 | Ruling 10 |
-| 7 | C-F4C-7 | open_ruling | Chicago | 1 | -7,934,035.00 |  | Ruling 17 |
-| 8 | C-F4B-2 | open_ruling | Northern Virginia | 1 | 7,901,881.12 |  | Ruling 16 |
-| 9 | C-CHI-5CP | limitation | Chicago | 0 |  |  | Ruling 17 |
-| 10 | C-PUE-BIAS | limitation | all | 0 |  |  | Ruling 14 |
-| 11 | C-ALPHA-DOMAIN | limitation | all | 0 |  |  | Ruling 15 |
+| 7 | C-F4C-7 | open_ruling | Chicago | 1 | -7,511,259.92 |  | P6-R10 |
+| 8 | C-F4B-2 | open_ruling | Northern Virginia | 1 | -39,269,141.07 |  | P6-R14 |
+| 9 | C-CHI-5CP | limitation | Chicago | 0 |  |  | P6-R10 |
+| 10 | C-PUE-BIAS | limitation | all | 0 |  |  | Ruling 14 / P6-R18 |
+| 11 | C-ALPHA-DOMAIN | limitation | all | 0 |  |  | Ruling 15 / P6-R18 |
 | 12 | C-BAND-25 | limitation | Chicago;Columbus;Dallas-Fort Worth | 0 |  |  | F2Fb-2 / F2Fb-4 |
 | 13 | C-F4D-8 | limitation | Atlanta;Phoenix | 0 |  |  | Ruling 19 |
 | 14 | C-F4M-13 | limitation | San Jose / Bay Area | 0 |  |  | Ruling 11 |
 | 15 | C-F4M-3 | limitation | Dallas-Fort Worth | 1 |  | 0.885680 | Ruling 9 |
 | 16 | C-SJ-PF | limitation | San Jose / Bay Area | 1 | -6,422,042.34 | -0.813647 | F4D-6 |
 | 17 | C-OHIO-EXCISE | limitation | Columbus | 1 | -16,187,651.92 | -2.050910 | F4D-1 |
-| 18 | C-EXCISE-ALLOC | limitation | Columbus | 1 | 17,239,632.05 |  | Unit 5A |
+| 18 | C-EXCISE-ALLOC | limitation | Columbus | 1 | 17,239,583.05 |  | Unit 5A |
 | 19 | C-STATION-POINT | limitation | all | 0 |  |  | Unit 5A |
 | 20 | C-F4C-8 | discharged | San Jose / Bay Area | 1 |  |  | Ruling 10 |
 | 21 | C-F4B-3 | discharged | Columbus | 1 | 0.00 | 0.000000 | Ruling 12 |
@@ -249,7 +249,7 @@ turned live could have passed on markup that described itself correctly while dr
 which is why every drawing rule added since asserts drawn coordinates — a rect's edge against a
 label's position, a tick against its label, two bars' shared edge against the connector between them.
 
-Positive controls are the other half. `era_ph5_page_tamper.py` (3924058d1293c10b0967b159df6f07de<!--F:era_ph5_page_tamper.py:md5-->) runs 29<!--D:tamper_case_count--> declared cases against an empty clean baseline, each with an absolute firing set fixed before the run, the first case leading and the control last. **A harness that has never fired is not evidence.**
+Positive controls are the other half. `era_ph5_page_tamper.py` (c5960959457aa40eb0f6a15cdc3fef90<!--F:era_ph5_page_tamper.py:md5-->) runs 29<!--D:tamper_case_count--> declared cases against an empty clean baseline, each with an absolute firing set fixed before the run, the first case leading and the control last. **A harness that has never fired is not evidence.**
 
 <!--ERA-BLOCK:tampercoverage-->
 | case | kind | gates it must fire |
@@ -305,7 +305,7 @@ extract rewrites the manifest and the manifest is a pin. **What was measured:**
 - `era_ph5_grains_manifest.json` did **not**: it differs in five `written_utc` values, stamped from the
   wall clock, and in nothing else — every md5, row count, column count, byte count and database hash in
   it is identical;
-- the rebuilt page is the same 193,712<!--F:era_ph5_dashboard.html:bytes--> bytes and the same 848<!--F:era_ph5_dashboard.html:lines--> lines as the committed page, differs on exactly one line — the embedded manifest — in ten substrings, all of them those timestamps, and is **identical after normalising that field**.
+- the rebuilt page is the same 196,396<!--F:era_ph5_dashboard.html:bytes--> bytes and the same 848<!--F:era_ph5_dashboard.html:lines--> lines as the committed page, differs on exactly one line — the embedded manifest — in ten substrings, all of them those timestamps, and is **identical after normalising that field**.
 
 **The ruling's own words for this checkpoint were an identity its architecture forbids, and this report
 does not repeat them.** The honest statement is the measured one above. Whether the checkpoint is

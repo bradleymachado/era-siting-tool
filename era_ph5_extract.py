@@ -1168,6 +1168,14 @@ def main():
     col_hi_met = fnum(ph2["Columbus"]["band_high_usd_per_mwh"])
     chi_ctr_met = fnum(ph2["Chicago"]["usd_per_mwh"])
     cross_fac = col_hi - chi_ctr
+    # P6-R20 item 4: no ruled sentence quotes a literal.  The two slots of P6-R14's ruled pair
+    # wording, and the two form facts C-PUE-BIAS and C-ALPHA-DOMAIN state, are READ FROM THE
+    # PUBLISHED CONTRACT at the moment the sentence is emitted.
+    nva_alt_it = fnum(nva["mitigated_alt_usd_per_it_mwh"])
+    nva_gap_it = fnum(nva["mitigated_usd_per_it_mwh"]) - nva_alt_it
+    pue_form_published = chi["pue_form"]
+    pue_domain_published = fnum(chi["pue_alpha_domain_max"])
+    pue_design_wb_c = (85.0 - 7.0 - 32.0) * 5.0 / 9.0
     cross_met = col_hi_met - chi_ctr_met
 
     G4 = [
@@ -1208,35 +1216,73 @@ def main():
          "Against a 10 % floor, and Option S's smallest qualifying system is 2.403x the entire "
          "50 MW B-20 programme cap - unreachable by construction, and barred on day one at a new "
          "location by the sheet's own words."),
-        ("C-F4C-7", 7, "open_ruling", "ComEd Rate BESH's determinants are UNRULED (Chicago pair)",
-         "Chicago", 1, -7934035.0, None, "either", "Ruling 17", f"{PH4_REPORT} section 5",
-         "Three Rate BESH rows carry determinant_is_assumption = 1. The tariff reading is "
-         "probably right, but adopting it means ratifying a five-hour coincident-peak expected "
-         "value, which is a work unit. Chicago publishes as a PAIR until it lands."),
-        ("C-F4B-2", 8, "open_ruling", "Dominion GS-4's ratchet is UNRULED (Northern Virginia pair)",
-         "Northern Virginia", 1, 7901881.12, None, "either", "Ruling 16",
+        ("C-F4C-7", 7, "open_ruling",
+         "ComEd Rate BESH: the WINDOW is ruled, the ZONAL SCALING FACTOR is not (Chicago pair)",
+         "Chicago", 1, fnum(chi["bracket_baseline_move_usd"]), None, "either", "P6-R10",
          f"{PH4_REPORT} section 5",
-         "GS-4 puts one 100 % ratchet on one distribution demand charge and the schema folds that "
-         "charge into two TOU rows. NEITHER priced end is believed to be the tariff's answer; the "
-         "tariff's own reading is a third construction nobody has priced."),
-        ("C-CHI-5CP", 9, "limitation", "Chicago's PJM coincident-peak window is DECLARED and UNRATIFIED",
-         "Chicago", 0, None, None, "unknown", "Ruling 17", f"{PH4_REPORT} section 8 caveat 2",
-         "June-September, 15:00-19:00 prevailing clock, weekdays, mirroring the ratified ERCOT "
-         "4CP construction. It is the alternative end of the Chicago bracket and the strategy "
-         "that end dispatches against."),
-        ("C-PUE-BIAS", 10, "limitation", "The PUE overlay OVERSTATES PUE at the hottest intervals",
-         ALL, 0, None, None, "upper bound", "Ruling 14", f"{PH4_REPORT} section 8 caveat 6",
-         "Above the 25.556 C design wet bulb the economiser is fully out and the only remaining "
-         "channel is the chiller's own 1.5 %/F - a marginal slope of 0.00198 PUE/C against the "
-         "chord's 0.00471. The bias is up to 0.0184 at Phoenix, 0.0171 at Austin and 0.0122 at "
-         "Dallas-Fort Worth, and that interval sets the demand charge in five of eight metros. "
-         "Every figure is an UPPER bound in that channel; the two-segment form is scheduled and "
-         "cannot change the order."),
-        ("C-ALPHA-DOMAIN", 11, "limitation", "The alpha elasticity domain was silently narrowed",
-         ALL, 0, None, None, "record", "Ruling 15", f"{PH4_REPORT} section 8 caveat 7",
-         "Unit 2F published 4.947 at its own reporting level L = 1.20; at the ruled L = 1.150 the "
-         "same construction gives 4.7405, which Unit 4A's gate has been enforcing. The operative "
-         "alpha is 2.8311."),
+         "P6-R10 ADOPTED the derived_uniform coincident-peak window, so the half of F4C-7 that "
+         "was about the window is discharged. What keeps the row open is the OTHER half: the PLC "
+         "is a 5CP average times a zonal scaling factor, and no source this project has read "
+         "publishes ComEd's ZSF, so every Chicago figure stands at ZSF = 1.000 by assumption. "
+         "Chicago publishes as a PAIR until the ZSF is sourced. This is an EPISTEMIC bracket "
+         "(F6E-2): it has no expiry, because what is missing is a fact about the world."),
+        ("C-F4B-2", 8, "open_ruling",
+         "Dominion GS-4's three demand quantities are RULED; the engine cannot yet bill them "
+         "(Northern Virginia pair)",
+         "Northern Virginia", 1, fnum(nva["bracket_baseline_move_usd"]), None, "either", "P6-R14",
+         f"{PH4_REPORT} section 5",
+         f"Northern Virginia publishes as a pair. The primary figure is what this project's "
+         f"billing engine bills from its database. The alternative, {nva_alt_it:.4f} $ per "
+         f"IT-MWh, is what Dominion Schedule GS-4 bills: the tariff's three demand quantities - "
+         f"Distribution Demand under a 100 % twelve-month ratchet, On-Peak Electricity Supply "
+         f"Demand under a 75 % summer-anchored ratchet, and Off-Peak Electricity Supply Demand "
+         f"as the excess over 90 % of the on-peak quantity - priced from the paragraphs "
+         f"themselves. The {nva_gap_it:.4f} $ per IT-MWh gap is a limitation of this project's "
+         f"billing engine, not an uncertainty about the tariff. It closes when schema v1.5 gives "
+         f"the schedule three billing determinants and a per-determinant ratchet, at which point "
+         f"this metro publishes a single figure. This is a MODELLING bracket (F6E-2) and its due "
+         f"date is Unit 6F."),
+        ("C-CHI-5CP", 9, "limitation",
+         "Chicago's PJM coincident-peak window is DERIVED and carries two named residuals",
+         "Chicago", 0, None, None, "unknown", "P6-R10", f"{PH4_REPORT} section 8 caveat 2",
+         "Chicago's PJM coincident-peak window is DERIVED from 22 observations of the PJM RTO "
+         "annual summer peak hour (2025 State of the Market Report for PJM, Section 3, "
+         "Table 3-6) and carries two named residuals: the zonal scaling factor is unsourced, so "
+         "every figure is unscaled (ZSF = 1.000); and the source tabulates the annual peak hour, "
+         "not the five-day 5CP candidate set. The window is June-August, 14:00-17:00 Chicago "
+         "prevailing, weekdays - and the weekday restriction is EMPIRICAL here (22 of 22 "
+         "observations), where ERCOT's 4CP weekday restriction is ASSUMED, with cp4_kw_allday "
+         "reported beside it as the sensitivity. The two coincident peaks are not one method."),
+        ("C-PUE-BIAS", 10, "limitation",
+         "The two-segment PUE overlay: the chord bias is REMOVED, and what the form does not see",
+         ALL, 0, None, None, "no longer an upper bound in this channel", "Ruling 14 / P6-R18",
+         f"{PH4_REPORT} section 8 caveat 6",
+         f"SUPERSEDED, with record. Above the {pue_design_wb_c:.3f} C design wet bulb the "
+         f"economiser is fully out and the only remaining channel is the chiller's own 1.5 %/F. "
+         f"Through Unit 6E-1 these extracts carried a single CHORD across the whole range, which "
+         f"OVERSTATED PUE above the design point by up to 0.0184 at Phoenix, 0.0171 at Austin "
+         f"and 0.0122 at Dallas-Fort Worth - at the interval that sets the demand charge in five "
+         f"of eight metros - so every figure was an upper bound in that channel. These extracts "
+         f"are on the {pue_form_published} form, which prices that range at a marginal 0.00198 "
+         f"PUE/C against the chord's 0.00471, and the bias is gone. What the form does NOT see, "
+         f"stated rather than narrated away: its acceptance gate reads only each metro's single "
+         f"hottest interval and is blind to the shape of the correction between the design point "
+         f"and the maximum; and nothing in the form prices a tariff - the dollar effect is Unit "
+         f"4E's measurement. The form MOVES THE BILLED PEAK INTERVAL in three of eight metros "
+         f"(Atlanta, Austin and Northern Virginia) and leaves the metro order unchanged at every "
+         f"bracket-end combination."),
+        ("C-ALPHA-DOMAIN", 11, "limitation",
+         "The alpha elasticity domain, and the bound Unit 4A still enforces",
+         ALL, 0, None, None, "record", "Ruling 15 / P6-R18",
+         f"{PH4_REPORT} section 8 caveat 7",
+         f"Unit 2F published 4.947 at its own reporting level L = 1.20. On the LINEAR form at "
+         f"the ruled L = 1.150 the same construction gives 4.7405. On the "
+         f"{pue_form_published} form these extracts are published on it WIDENS to "
+         f"{pue_domain_published:.4f}, and that is the figure in pue_alpha_domain_max. Unit 4A "
+         f"is not edited, so 4A's own emission gate still bounds alpha by the LINEAR 4.7405 "
+         f"while emitting two-segment series: it enforces the TIGHTER of the two and refuses "
+         f"more than it must, never less (F6E-7). The operative alpha is 2.8311 and it is "
+         f"inside both."),
         ("C-BAND-25", 12, "limitation", "The +/-25 % market bands, and the one adjacency they touch",
          band_metros, 0, None, None, "either", "F2Fb-2 / F2Fb-4",
          f"{PH2_REPORT} section 4",

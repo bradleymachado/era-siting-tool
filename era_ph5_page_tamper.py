@@ -383,10 +383,15 @@ def mutate_page(tmp, case):
                                   (1136, 384, 48, 384), (48, 384, 48, 48)))
         txt = txt[:j] + frame + txt[j:]
     elif case == "W17":
-        head = ('<text class="era-value" x="510" y="56" text-anchor="start" data-role="label-high" '
+        # x RE-DECLARED AT UNIT 6E-2: the label's x is DERIVED from the value it draws, and the
+        # two-segment publication moved DFW's band_high_usd_per_it_mwh, so 510 -> 513.  The case
+        # is unchanged - it still nudges this exact element by +40 px and must still fire the
+        # same set.  A tamper anchor that encodes a published value is re-declared with the
+        # refresh, never loosened (F5H1-2: a declared tamper set is never inherited).
+        head = ('<text class="era-value" x="513" y="56" text-anchor="start" data-role="label-high" '
                 'data-src="era_ph5_metro:Dallas-Fort Worth:band_high_usd_per_it_mwh">')
         assert txt.count(head) == 1, "the DFW high label is not where the declaration says (%d)" % txt.count(head)
-        txt = txt.replace(head, head.replace('x="510"', 'x="550"'))
+        txt = txt.replace(head, head.replace('x="513"', 'x="553"'))
     elif case == "W18":
         head = ('<text class="era-value" x="1074" y="216" text-anchor="end" '
                 'data-src="era_ph5_metro:Austin:mitigation_fixed_usd">')

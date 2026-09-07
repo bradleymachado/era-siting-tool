@@ -130,8 +130,12 @@ def mutate(case, d):
     if case == "X01":
         p = os.path.join(d, "era_ph5_metro.csv")
         txt = read(p)
-        old = "81.53954845026165"
-        new = "82.53954845026165"
+        # NEEDLE RE-DECLARED AT UNIT 6E-2 (F5H1-2: a declared tamper set is never inherited,
+        # and neither is a needle that encodes a published value).  Chicago's
+        # usd_per_it_mwh moved 81.53954845026165 -> 81.51756774397158 on the two_segment_ph6
+        # basis.  The case is unchanged: +1.0 on the same cell of the same grain.
+        old = "81.51756774397158"
+        new = "82.51756774397158"
         n = txt.count(old)
         if n != 1:
             raise AssertionError("X01 needle %r occurs %d times, expected 1" % (old, n))
@@ -142,16 +146,18 @@ def mutate(case, d):
         # occurs twice - the ranking row and the stack block's mitigated total -
         # and replace_unique refused it. Mechanics, not a declared-set change
         # (5H-4 s16.2).
-        replace_unique(p, "| 81.54 | 591,589,837.26 | 74.95 | 8.08 |",
-                       "| 81.54 | 591,589,837.26 | 74.96 | 8.08 |")
+        # RE-DECLARED AT UNIT 6E-2, same widened two-cell form, refreshed values.
+        replace_unique(p, "| 81.52 | 591,516,515.88 | 74.94 | 8.07 |",
+                       "| 81.52 | 591,516,515.88 | 74.95 | 8.07 |")
     elif case == "X03":
         p = os.path.join(d, REPORT)
         replace_unique(p, "Siting beats mitigating, and it is not close.",
                        "Siting beats mitigating by 47.67 and it is not close.")
     elif case == "X04":
         p = os.path.join(d, REPORT)
-        replace_unique(p, "12.46<!--G:G1:Austin:mitigation_pct_of_baseline-->",
-                       "12.56<!--G:G1:Austin:mitigation_pct_of_baseline-->")
+        # RE-DECLARED AT UNIT 6E-2: Austin's mitigation_pct_of_baseline 12.46 -> 12.37.
+        replace_unique(p, "12.37<!--G:G1:Austin:mitigation_pct_of_baseline-->",
+                       "12.47<!--G:G1:Austin:mitigation_pct_of_baseline-->")
     elif case == "X05":
         p = os.path.join(d, REPORT)
         replace_unique(
